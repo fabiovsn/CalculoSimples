@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo_duncan.css"/>
+    <script type="text/javascript">
+        function calcularTotal(){
+            num1 = document.getElementById("valor1").value;
+            num2 = document.getElementById("valor2").value;
+
+            total = parseFloat(num1) + parseFloat(num2);
+            
+            document.getElementById("total").value = total;
+
+        }
+    
+    </script>
+    <title>Cálculo Simples</title>
+</head>
+<body>
+    <div id = "container">
+        <form name="orderForm" method = "POST">
+            <div class = "campo">
+                Primeiro valor: <input type="text" id="valor1" name="valor1" value="">
+            </div>
+            <div class = "campo">
+                Segundo valor: <input type="text" id="valor2" name="valor2" value="">
+            </div>
+            <div class = "campo">
+                Total: <input type="text" id="total" name="total" value="" readonly="readonly">
+            </div>
+            <div class = "campo">
+                <input type="button" value="Calcular" onclick="calcularTotal(this.form);"/>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
